@@ -19,10 +19,14 @@ ignore-pyproject-manifest = false
 ignore-pypi-mapping = false
 
 [feature.dev.pypi-dependencies]
-# local dependencies placeholder
+# local dependencies start
+lower-level-package = { path = "../lower-level-package", editable = true }
+# local dependencies end
 
 [feature.dev.pypi-options.dependency-overrides]
-# local dependencies placeholder
+# local dependencies start
+lower-level-package = { path = "../lower-level-package", editable = true }
+# local dependencies end
 
 [environments]
 default = { solve-group = "default" }
