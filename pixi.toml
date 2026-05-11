@@ -5,6 +5,7 @@ preview = ["pixi-build"]
 
 [dependencies]
 higher-level-package = { path = "." }
+lower-level-package = ">=0.0.0,<0.0.1"
 
 [package]
 name = "higher-level-package"
