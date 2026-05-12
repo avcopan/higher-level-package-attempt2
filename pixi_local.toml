@@ -5,7 +5,7 @@ preview = ["pixi-build"]
 
 [dependencies]
 higher-level-package = { path = "." }
-lower-level-package = ">=0.0.0,<0.0.1"
+lower-level-package = { path = "../lower-level-package" }
 
 [package]
 name = "higher-level-package"
@@ -18,15 +18,7 @@ backend = { name = "pixi-build-python", version = "*" }
 ignore-pyproject-manifest = false
 ignore-pypi-mapping = false
 
-[feature.dev.pypi-dependencies]
-# local dependencies start
-lower-level-package = { path = "../lower-level-package", editable = true }
-# local dependencies end
-
-[feature.dev.pypi-options.dependency-overrides]
-# local dependencies start
-lower-level-package = { path = "../lower-level-package", editable = true }
-# local dependencies end
+[feature.dev.dependencies]
 
 [environments]
 default = { solve-group = "default" }
